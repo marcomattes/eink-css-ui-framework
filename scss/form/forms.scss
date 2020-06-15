@@ -1,0 +1,187 @@
+
+fieldset {
+  border-color: var(--primary-color);
+}
+
+input {
+  &[type="email"],
+  &[type="text"],
+  &[type="password"],
+  &[type="tel"],
+  &[type="search"],
+  &[type="number"],
+  &[type="month"],
+  &[type="datetime-local"],
+  &[type="datetime"],
+  &[type="week"],
+  &[type="date"],
+  &[type="url"] {
+    padding: 0.5em 1em;
+    border-radius: 0;
+    border: var(--border-size) solid #333;
+    &::placeholder {
+      letter-spacing: 0.1px;
+      color: var(--placeholder-color);
+    }
+    &:focus {
+      outline: 0;
+      border: 2px dotted var(--primary-color)
+    }
+  }
+}
+
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.5em;
+  cursor: pointer;
+}
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1em;
+  height: 1em;
+  border: var(--border-size) solid var(--primary-color);
+  background: #fff;
+  border-radius: 0;
+}
+
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '\2713\0020';
+  position: absolute;
+  top: 0.05em;
+  left: 0.3em;
+  font-size: 1em;
+  line-height: 0.8;
+  color: var(--primary-color);
+  transition: all .2s;
+}
+
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: var(--disabled-color);
+  background-color: var(--disabled-color);
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: var(--disabled-color);
+}
+[type="checkbox"]:disabled + label {
+  color: var(--disabled-color);
+}
+
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: var(--border-size) dotted var(--primary-color);
+}
+
+
+// Radio Button
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+  position: relative;
+  padding-left: 1.75em;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1em;
+  height: 1em;
+  border: var(--border-size) solid var(--primary-color);
+  background: #fff;
+  border-radius: 100%;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: '';
+  width: 0.75em;
+  height: 0.75em;
+  background: var(--primary-color);
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+}
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+[type="radio"]:disabled + label:before {
+  border-color: var(--disabled-color);
+}
+
+[type="radio"]:disabled:checked + label:after {
+  color: var(--disabled-color);
+
+}
+[type="radio"]:disabled + label {
+  color: var(--disabled-color);
+}
+
+[type="radio"]:checked:focus + label:before,
+[type="radio"]:not(:checked):focus + label:before {
+  border: var(--border-size) dotted var(--primary-color);
+}
+
+
+// Textarea
+
+textarea {
+  color: var(--primary-color);
+  border: var(--border-size) solid var(--primary-color);
+  padding: 0.5em;
+  &::placeholder {
+    letter-spacing: 0.1px;
+    color: var(--placeholder-color);
+  }
+  &:focus {
+    border: var(--border-size) dotted var(--primary-color);
+    outline: 0;
+  }
+  &[disabled] {
+    color: var(--disabled-color);
+    border-color: var(--disabled-color);
+  }
+}

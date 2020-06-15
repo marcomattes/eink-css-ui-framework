@@ -1,0 +1,22 @@
+{
+  "name": "eink-css-ui-framework",
+  "version": "1.0.0",
+  "description": "A CSS Only Framework optimized for e-ink display.",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/main.scss   css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcomattes/eink-css-ui-framework.git"
+  },
+  "author": "",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/marcomattes/eink-css-ui-framework/issues"
+  },
+  "homepage": "https://github.com/marcomattes/eink-css-ui-framework#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4"
+  }
+}

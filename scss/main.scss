@@ -1,0 +1,25 @@
+@import "_normalize";
+
+@import "button/button";
+@import "form/forms";
+
+:root {
+  --primary-color: black;
+  --disabled-color: #999999;
+  --placeholder-color: #333333;
+  --border-size: 0.125em;
+}
+
+li {
+  padding-bottom: 0.6em;
+  list-style-type: none;
+}
+
+
+
+
+
+select {
+  border: 2px solid black;
+  padding: 0.5em 1em;
+}
