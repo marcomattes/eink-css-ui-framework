@@ -1,5 +1,5 @@
 {
-  "name": "eink-css-ui-framework",
+  "name": "ePaperCSS",
   "version": "1.0.0",
   "description": "A CSS Only Framework optimized for e-ink display.",
   "scripts": {

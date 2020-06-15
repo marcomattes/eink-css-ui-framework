@@ -10,12 +10,19 @@
   --border-size: 0.125em;
 }
 
+body {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
 li {
   padding-bottom: 0.6em;
   list-style-type: none;
 }
 
-
+label {
+  display: block;
+}
 
 
 

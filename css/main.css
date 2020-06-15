@@ -476,9 +476,16 @@ textarea {
   --placeholder-color: #333333;
   --border-size: 0.125em; }
 
+body {
+  max-width: 90%;
+  margin: 0 auto; }
+
 li {
   padding-bottom: 0.6em;
   list-style-type: none; }
+
+label {
+  display: block; }
 
 select {
   border: 2px solid black;
